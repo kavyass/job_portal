@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+  <title>Job Portal</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/button.min.css">
+  <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <script src="js/app.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+  <script>
+  $('myChart').click(function(){
+  window.location.href='main.html';
+  })
+  </script>
+</head>
+<body>
+
+
+ <div>
+   <p><h4 style="text-align:center;font-family: 'Open Sans', sans-serif;">Choose a job you love, and you will never have to work a day in your life.</h4></p>
+   </div>
+ <div class="container"  style="background-image:url(images/bg5.jpg);background-size:cover;background-position:center;background-repeat: no-repeat;">
+      <canvas id="myChart"
+
+      width="100"></canvas>
+       </div>
+
+       <script>
+         let myChart=document.getElementById('myChart').getContext('2d');
+         Chart.defaults.global.elements.rectangle.borderWidth=2;
+
+     Chart.defaults.global.defaultFontsize=8;
+         let barChart=new Chart(myChart,{
+           type:'bar',
+           data:{
+             labels:['Angular js','Node js','Full Stack','Oracle','bootstrap','CSS','j2ee'],
+             datasets:[{
+                          label:'skill',
+
+                       data:[
+                                 717594,
+                                 181045,
+                                 253060,
+                                 106519,
+                                 505162,
+                                 95702,
+                                 101897
+                               ],
+                              backgroundColor:[
+                                'rgba(455,99,32,0.7)',
+                                'rgba(54,262,535,0.7)',
+                                'rgba(75,392,392,0.7)',
+                                'rgba(153,202,425,0.7)',
+                                'rgba(455,359,64,0.7)',
+                                'rgba(455,99,332,0.7)'
+
+
+                              ],
+
+                              borderWidth:1,
+                              borderColor:'#777',
+                              hoverBorderWidth:1,
+                              hoverBorderColor:'#000'
+
+
+                                    }]
+                                  },
+                                  options:{
+                                    title:{
+                                      display:true,
+                                      text:'Skill analysis',
+                                      fontSize:45,
+                                      fontColor:'black'
+
+                                    },
+                                    scales:{
+                                      xAxes:[{
+
+                                        barPercentage:0.5
+
+                                      },
+                                      {
+                                      fontColor:'black'
+                                      }
+
+
+                                      ]
+                                    }
+                                  }
+                                });
+
+       </script><br><br>
+       <div class="row">
+       <div class="col s5">.</div>
+<div class="col s2">
+  <form action="index1.html">
+    <button class="btn waves-effect waves-light" type="submit" style="background-color:#039be5;color:black;font-family: 'Open Sans', sans-serif;" name="action">Get Started<i class="material-icons right">send</i></button>
+  </form>
+<div class="col s5">.</div>
+</div>
+ <div>
+  <div class="row"><div class="col s12"> <h5 style="color:black;text-align:center;font-family: 'Lato', sans-serif;"><b><hr>Career Plans<hr></b></h5></div></div>
+    <div class="row">
+      <div class="col s2">.</div>
+      <div class="col s8">
+        <img src="images/front.jpg" alt="image"><br>
+      </div>
+      <div class="col s2">.</div>
+    </div>
+ </div>
+ <div class="footer">
+</div>
+  </body>
+</html>
